@@ -5,7 +5,17 @@ html,body{
 body{
     display: flex;
     flex-direction: column;
+    /* background-image: url(https://images-eu.ssl-images-amazon.com/images/I/51y8U6CmGuL._AC_UL600_SR600,600_.jpg);
+    background-size: cover; */
+    background-color: #c2c2c2;
 }
+
+header{
+    height: 15rem;
+
+    display: flex;
+    flex-direction: row;   
+}  
 
 main {
     /* Horizontal */
@@ -15,31 +25,17 @@ main {
     flex-direction: row;
 }
 
-header{
-    height: 15rem;
-
-    display: flex;
-    flex-direction: row;
-
-    /* justify-content: space-between; */
-
-    
-}  
-
 footer {
     bottom: 0;
     left: 0;
     height: 70px;
-    background-color: #c2c2c2;
+    /* background-color: #c2c2c2; */
+    background: #215999;
     width: 100%;
     text-align: center;
   }
 
 img{
-    /* width: 90%;
-    height: 90%;
-    float: left;
-    margin: 1%; */
     margin        : 0.625rem; 	
     display       : flex; 	
     flex-direction: column;  	
@@ -61,7 +57,7 @@ img{
 }
 
 .nombre{
-    background-color: white;
+    /* background-color: white; */
     /* Vertical */
     -webkit-flex: 2;
     flex: 2;
@@ -70,52 +66,38 @@ img{
    
     display: flex;     
     justify-content: center;    
-    /* align-content: center;      */
     flex-direction: column;
+    position: relative;
 }
 
 .skills{
     /* width: 15rem; */
     width: 240px;
-    /* background: #009999;  */
     background-color: #2a68af;
-    /* margin: 1rem; */
-    /* margin-left: 5px; */
-    /* margin-right: 0; */
     display: flex;     
-    /* justify-content: center;     */
-    /* align-content: center;      */
     flex-direction: column;
 }
 .contenedor{
      margin: 1rem;
+     
 }
 
 .descripcion{
-    /* padding: 0 2rem;
-     */
-     /* float: left; */
      -webkit-flex: 2;
     flex: 2;
    
-    /* text-align: center; */
-    /* margin: 1rem; */
     display: flex;     
     justify-content: center;    
     flex-direction: column;
-    /* background-color: white; */
-    background-image: url(https://images-eu.ssl-images-amazon.com/images/I/51y8U6CmGuL._AC_UL600_SR600,600_.jpg);
-    background-size: cover;
+    /* background-image: url(https://images-eu.ssl-images-amazon.com/images/I/51y8U6CmGuL._AC_UL600_SR600,600_.jpg);
+    background-size: cover; */
 }
 
 h1{
     font-size: 5rem;
-    /* color:#d9d9d9; */
+    color: black;
 }
 h2{ 
-    /* flex: 2; */
-    /* display: flex; */
-     /* background-color: #009999; */
      background-color: #2a68af;
 } 
 
@@ -131,8 +113,42 @@ h2{
 }
 
 .img-fondo{
-    /* background-image: url("https://viajes.nationalgeographic.com.es/medio/2013/07/22/hemis_0543020_1000x666.jpg"); */
     background-image: url(https://dirigentesdigital.com/multimedia/img/big/shutterstock-723591637_41-131616_20190304091535.jpg);
     background-size: cover;
-    /* background-image: url(./IMG_20201201_154545538.jpg);*/
 }
+
+
+ @media  (max-width: 768px) {
+    body,header,main,footer{
+      display: inline;
+      margin-right: 3rem;
+    }
+  } 
+ @media  (max-width: 768px){
+    .skills,.foto{
+        width: auto; 
+        text-align: center;
+        align-items:center;
+        display: flex;     
+        justify-content: center;    
+        flex-direction: column;
+        position: relative;
+      }
+  }
+  @media(max-width: 768px){
+    .lista{
+        margin-right: 5rem;
+    }
+
+  }
+  @media(max-width: 768px){
+    footer{
+        background: #215999;
+        display: -webkit-flex;
+        display:         flex;
+        -webkit-align-items: bottom;
+        align-items: bottom;
+        -webkit-justify-content: bottom;
+        justify-content: bottom;
+    }
+  }
